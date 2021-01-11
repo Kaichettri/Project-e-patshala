@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<style>
+#contact_us {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #e0edeb;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    background-image: url('https://i.pinimg.com/originals/e8/5e/5c/e85e5c490d2bb5bee5500aa4b2f77055.jpg');
+}
+
+#contact_us h2 {
+    font-family: 'Caveat', cursive;
+    color: #fafafa;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    text-shadow: 0.06em 0.06em 0.12em #061d1a71;
+}
+
+.contact_form {
+    width: 60%;
+    height: 75%;
+    background-color: transparent;
+    border-radius: 7px;
+    padding: 3em 1.5em 2em 1.5em;
+    margin: 0 auto;
+    box-shadow: 0.1em 0.1em 2em #fab76a;
+}
+
+@media all and (max-width: 62em) {
+    #contact_us {
+        padding-bottom: 25%;
+    }
+    .contact_form {
+        width: 80%;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+input,textarea {
+    padding: 0.8em;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+}
+input {
+    width: 40%;
+    margin-bottom: 2em;
+}
+
+textarea {
+    width: 86.7%;
+    height: 30vh;
+    resize: vertical;
+    max-height: 300px;
+    margin: 0 6.625%;
+}
+
+#submit {
+    margin-top: 2em;
+    margin-left: 58.3%;
+    width: 35%;
+    background-color: #aa5d27;
+    color: #fafafa;
+    border: none;
+    box-shadow: 0 0.1em 0.3em #061d1a71;
+}
+@media all and (max-width: 62em) { 
+    .row {
+        flex-direction: column;
+        margin-top: 1em;
+    }
+    input {
+        width: 86.7%;
+        margin: 0 6.625% 4% 6.625%;
+    }
+}
+footer {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: auto;
+    padding: 0.5em 1em;
+    background-color: #061d1a;
+    text-align: left;
+    justify-content: space-between;
+}
+
+footer li {
+    color: #ecfef8;
+    display: inline-block;
+    padding: 1em 0.5em;
+}
+span {
+    color: #ecfef8;
+    padding: 1em 0.2em 1em 0.5em;
+}
+</style>
+<div id="contact">
+  <section id="contact_us">
+    <div>
+      <h2>Contact us</h2>
+    </div>
+    <div>
+      <form id="form" class="contact_form" action="https://www.freecodecamp.com/email-submit">
+        <div class="row">
+          <input type="text" name="name" id="name" placeholder="Name" required>
+          <input type="email" name="email" id="email" placeholder="Email address" required></div>
+        <div><textarea name="message" id="message" placeholder="Your message..."></textarea></div>
+        <div><button type="submit" id="submit" class="btn">Send</button></div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+    <span>&copy 2020 Succulent Landing Page</span>
+  </footer>
+</div>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.succulent_care {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 6em 3em;
+    background-color:#ecfef8;
+}
+
+.icon img {
+    width: 3em;
+    display: flex;
+    position: absolute;
+}
+.detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 4em;
+    margin-top: 0.4em;
+}
+
+@media all and (max-width: 62em) { 
+    .succulent_care {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+    .column {
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding-right: 1em;
+    }
+}
+
+/* Video section*/
+
+.video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    background: url('Logo1.jpg') center center no-repeat;
+
+}
+.play_btn {
+    
+    display: flex;
+    z-index: 1;
+    margin: 20% auto;
+    justify-content: center;
+}
+.play_btn img {
+    width: 100px;
+}
+.play_btn > img:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+@media all and (max-width: 62em) { 
+    .play_btn img{
+        width: 75px;
+    }
+}
+#product_section h2 {
+    display: flex;
+    position: relative;
+    font-family: 'Caveat', cursive;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 2em;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+#products {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #fafafa;
+    padding: 5em 3em 10em 3em;
+    gap: 2em;
+}
+
+.product {
+    width: 22%;
+    border: 1px solid #ecfef8;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #ecfef8;
+    box-shadow: 0 0.2em 0.5em #061d1a71;
+}
+
+.product img {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding-bottom: 0.8em;
+}
+
+.plants {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 1em 0;
+}
+.product h3 {
+    margin: 1.1em 0 0.8em 0;
+    font-weight: 500;
+    font-size: 20px;
+}
+.product p {
+    margin: 0.5em 1em;
+}
+.btn {
+    width: 40%;
+    height: 2.5em;
+    background-color: #00919bd0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 1em;
+    border-color: #00919b91;
+    color: #ffffff;
+}
+@media all and (max-width: 62em) { 
+    #products {
+        flex-wrap: wrap;
+        padding: 3em 1em 8em 1em;
+    }
+    .product {
+        width: 40%;
+    }
+}
+
+@media all and (max-width: 32em) {
+    .product {
+        width: 70%;
+    }
+}
+
+
+#contact_us {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #e0edeb;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    background-image: url('https://i.pinimg.com/originals/e8/5e/5c/e85e5c490d2bb5bee5500aa4b2f77055.jpg');
+}
+
+#contact_us h2 {
+    font-family: 'Caveat', cursive;
+    color: #fafafa;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    text-shadow: 0.06em 0.06em 0.12em #061d1a71;
+}
+
+.contact_form {
+    width: 60%;
+    height: 75%;
+    background-color: transparent;
+    border-radius: 7px;
+    padding: 3em 1.5em 2em 1.5em;
+    margin: 0 auto;
+    box-shadow: 0.1em 0.1em 2em #fab76a;
+}
+
+@media all and (max-width: 62em) {
+    #contact_us {
+        padding-bottom: 25%;
+    }
+    .contact_form {
+        width: 80%;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.flip-card {
+  background-color: transparent;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+ </style> 
+<div id="succulent_care"></div>
+<div class="container">
+  <section class="succulent_care">
+    <div class="column">
+      <div class="icon"><i class="fa fa-diamond" aria-hidden="true"></i>
+      </div>
+      <div class="detail">
+        <h3>Gain knowledge</h3>
+        <p>Gain knowledge about the domain</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+      </div>
+      <div class="detail">
+        <h3>Lighten ourselves</h3>
+        <p>Lighten yourselves with our courses</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="icon"><i class="fa fa-pied-piper-alt" aria-hidden="true"></i>
+      </div>
+      <div class="detail">
+        <h3>Practical experience</h3>
+        <p>Gather practical experience by completing courses</p>
+      </div>
+    </div>
+  </section>
+  <section class="video" id="video">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/HndV87XpkWg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+  </section>
+  
+  <section id="product_section">
+    <div>
+      <h2>Courses</h2>
+    </div>
+      <h2>Categories</h2>
+    <div id="products">
+      <h3 style="background-color: yellow; text-align:center;">Developement</h3>
+    <div class="product" id="succulent1">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\dev1.jpeg" alt="">
+      <div class="plants">Flutter & Dart - The Complete Guide[2020 edition]</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.6<br>
+    "Enrollment": 112,764</b><br>
+    "Description": Join the most comprehensive & bestselling Flutter course and learn how to build amazing iOS and Android apps!You don't need to learn Android/ Java and iOS/ Swift to build real native mobile apps!Flutter - a framework developed by Google - allows you to learn one language (Dart) and build beautiful native mobile apps in no time. Flutter is a SDK providing the tooling to compile Dart code into native code and it also gives you a rich set of pre-built and pre-styled UI elements (so called widgets) which you can use to compose your user interfaces.</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Maximillian Schwarzmüller</h3>
+      <button class="btn">Enroll</button>
+    </div>
+  
+    <div class="product" id="succulent2">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\dev2.jpeg" alt="">
+      <div class="plants">React - The Complete Guide (incl Hooks, React Router, Redux)</div>
+      <p><b>Price: 360</b><br>
+    <b>Rating: 4.6</b><br>
+    <b>Enrollment": 335,179</b><br>
+    "Description": "Learn React or dive deeper into it. Learn the theory, solve assignments, practice in demo projects and build one big application which is improved throughout the course: The Burger Builder!</p>
+      <h3>Discount: 96%(Original:8640)</h3><h3>Author: Maximilian Schwarzmüller</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent3">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\dev3.jpeg" alt="">
+      <div class="plants">The Beginner's Guide to Artificial Intelligence in Unity</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.7<br>
+    "Enrollment": "20,141"</b><br>
+    "Description": "Do your non-player characters lack drive and ambition? Are they slow, stupid and constantly banging their heads against the wall? Then this course is for you. Join Penny as she explains, demonstrates and assists you in creating your very own NPCs in Unity with C#. All you need is a sound knowledge of Unity, C# and the ability to add two numbers together.</p>
+      <h3>"Discount": "72%(Original:1000)"<br>
+    Author: "Penny de Byl",</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent4">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\dev4.jpeg" alt="">
+      <div class="plants">Unreal Engine 4: The Complete Beginner's Course</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.7<br>
+    "Enrollment": "20,141"</b><br>
+    "Description": "Do your non-player characters lack drive and ambition? Are they slow, stupid and constantly banging their heads against the wall? Then this course is for you. Join Penny as she explains, demonstrates and assists you in creating your very own NPCs in Unity with C#. All you need is a sound knowledge of Unity, C# and the ability to add two numbers together.</p>
+      <h3>Discount": "96%(Original:8640)"<br>
+    "Course provider": "David Nixon</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div id="products">
+    <div class="product" id="succulent1">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\dev5.jpeg" alt="">
+      <div class="plants">The Complete Android N Developer Course</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.4<br>
+    "Enrollment": 148,098</b><br>
+    "Description":Learn Android App Development with Android 7 Nougat by building real apps including Uber, Whatsapp and Instagram! Become a professional app developer, take freelance gigs and work from anywhere in the world.Submit your apps to Google Play and generate revenue with Google Pay and Google Ads.A huge range of technologies are covered, including open source Parse Server, Firebase, Admob, GDX (game development), Bluetooth and a whole lot more.</p>
+      <h3>Discount": "96%(Original:8640)"<br>
+    "Course provider": "Rob Percival"</h3>
+      <button class="btn">Enroll</button>
+    </div>
+  </div>
+  </div>
+</section>
+  <section id="product_section">
+    <div id="products">
+      <h3 style="background-color: yellow; text-align:center;">Design</h3>
+    <div class="product" id="succulent1">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\des1.jpeg" alt="">
+      <div class="plants">The Ultimate Drawing Course - Beginner to Advanced</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.5<br>
+    "Enrollment": 149,417</b><br>
+    "Description": Join over 260,000 learning student and start gaining the drawing skills you've always wanted.The Ultimate Drawing Course will show you how to create advanced art that will stand up as professional work. This course will enhance or give you skills in the world of drawing - or your money back This course will take you from having little knowledge in drawing to creating advanced art and having a deep understanding of drawing fundamentals.</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Quinton Batchelor,Jaysen Batchelor</h3>
+      <button class="btn">Enroll</button>
+    </div>
+     <div class="product" id="succulent2">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\des2.jpeg" alt="">
+      <div class="plants">Ultimate Adobe Photoshop Training: From Beginner to Pro</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.6<br>
+    "Enrollment": 129,890</b><br>
+    "Description": This is the ultimate Photoshop training course that will take you from absolute beginner to proficien Learn how to use the program with ease while having fun! My approach is simple: we focus on real world cases and I present the best techniques that require minimal effort yet produce maximum results. All my content is focused on getting the job done in the least amount of time possible. I'll be using the latest version of the program - Photoshop CC 2021, but all the content is explained for all users, no matter what version you have installed.
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Cristian Doru Barin</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent3">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\des3.jpeg" alt="">
+      <div class="plants">Sketch from A to Z (2020): Become an app designer</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.7<br>
+    "Enrollment": 29146</b><br>
+    "Description": Learn to Design Beautiful, High-Quality Mobile Application UI with Sketch's Powerful Tools and Smooth Workflow Master the essential principles and tools of Sketch. Discover design techniques that will enhance your creative potential. Learn and implementUI best practices to ensure quality and usability. Journey from concept to completion by creating a sample mobile application.”",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Joseph Angelo Todaro</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent4">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\des4.jpeg" alt="">
+      <div class="plants">Graphic Design Bootcamp: Photoshop, Illustrator, InDesign</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.5<br>
+    "Enrollment": 89,906</b><br>
+    "Description": This course is for anyone who is interested in becoming a graphic designer, and especially geared towards beginners. When you enroll in this course, you will have access to over 15 hours of on-demand content, as well as the opportunity to join a private Facebook group with over 13,000 members.",
+
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Derrick Mitchell</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent1">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\des5.jpeg" alt="">
+      <div class="plants">Illustrator 2020 MasterClass</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.6<br>
+    "Enrollment":123,863</b><br>
+    "Description": This course has been purposely designed for users of all experiences, from complete beginners to existing Illustrator users, who want to take their skills to the next level. Being able to confidently work in Illustrator is an essential skill for any Graphic Designer or Illustrator, but it is an equally useful tool for Product Designers, Fashion Designers, UI/UX designers and various other areas within and outside of the creative industry.",
+
+
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author:   Martin Perhiniak </h3>
+      <button class="btn">Enroll</button>
+    </div>
+  </div>
+</section>
+<section id="product_section">
+  <div id="products">
+      <h3 style="background-color: yellow; text-align:center;">Marketing</h3>
+    <div class="product" id="succulent1">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\marr1.jpeg" alt="">
+      <div class="plants">The Complete Digital Marketing Course - 12 Courses in 1</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.5<br>
+    "Enrollment": 525,799</b><br>
+    "Description": Master Digital Marketing Strategy, Social Media Marketing, SEO, YouTube, Email, Facebook Marketing, Analytics & More! Join 400,000+ students in the bestselling digital marketing course on Udemy!\n    With over 20 hours of training, quizzes and practical steps you can follow - this is one of the most comprehensive digital marketing courses available. We'll cover SEO, YouTube Marketing, Facebook Marketing, Google Adwords, Google Analytics and more!\n    Learn By Doing\n    The course is hugely interactive with projects, checklists & actionable lectures built into every section.Learn step by step how to market a business online from scratch across all the major marketing. Follow the steps on screen to get results at work, for own business or for your digital marketing clients.</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Rob Percival, Daragh Walsh</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent2">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\marr2.jpeg" alt="">
+      <div class="plants">Ultimate Google Ads Training 2020: Profit with Pay Per Click</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.5<br>
+    "Enrollment":166,852</b><br>
+    "Description": Google Ads 2020: How our clients have transformed their sales using Google Ads & get your Google Ads certification! \n    Win back your business from your competition by really learning Google AdWords like an expert. This Google AdWords Course has the *HIGHEST STUDENT SATISFACTION RATING in Udemy's entire marketing and advertising section! *(Reported by Udemy)\n    Welcome to Udemy's highest rated AdWords course of all time.\n    Over 99,000 business owners, students, marketing specialists and entrepreneurs have enrolled writing in thousands of 5 star reviews\n    Learn How To Drive Consistent, Reliable, High-Quality Traffic To Your Site Every Single Day With Google AdWords!\n    Your customers are using Google every single day to search for the products and services you offer, but you're losing business to your competition because their AdWords campaigns are more optimized than yours are.",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Isaac Rudansky</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent3">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\marr3.jpeg" alt="">
+      <div class="plants">Facebook Ads & Facebook Marketing MASTERY 2021 | Coursenvy</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.5<br>
+    "Enrollment":165,682</b><br>
+    "Description": Facebook Marketing from beginner to advanced! Join 100,000+ students who MASTERED Facebook and are Facebook Ads experts! \n    Want to become a Facebook Ads expert? JOIN THE 500+ COMPANIES I HAVE CONSULTED ON SOCIAL MEDIA MARKETING AND INCREASED CONVERSIONS FOR VIA FACEBOOK AND INSTAGRAM ADS! Facebook Marketing is a REQUIRED skill for anyone with a business, product, service, brand, or public figure they need to PROMOTE! Join our 300,000+ modMBA students who have MASTERED Facebook advertising with this COMPLETE Facebook Marketing Mastery Course! \n        Three reasons to TAKE THIS COURSE right now! \n    You get lifetime access to lectures!\n    You can ask me questions and see me respond to every single one of them thoughtfully!",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Course Envy</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent4">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\marr4.jpeg" alt="">
+      <div class="plants">Instagram Marketing 2021: Complete Guide To Instagram Growth</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.5<br>
+    "Enrollment":136,359</b><br>
+    "Description": Instagram is a small time investment for a huge customer return!\n    Once you spend just a few hours learning the powerful proven Instagram marketing techniques, you will see why we are the recommend course. We have easy to follow step by step techniques to grow your followers and market your business.\n    Your time will pay off by reaching thousands of new customers, and building a strong, trustworthy relationship through Instagram will skyrocket your brand awareness to a level beyond your expectations. You will have the tools to create quality content, grow your Instagram followers and market your business to these hyper-targeted customers.\n    When making a purchasing decision, people online use your social media presence as a measure of the quality, and trustworthiness of your business. Nothing speaks trust and quality louder than having a thousands of targeted, real, and loving Instagram followers on your profile (of which you can contact at any time!) Your profile will be professional and compelling and you will be using stories, live streaming and all the other new features Instagram releases.",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Benjamin Wilson, Entrepreneur Academy/h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent1">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\marr5.jpeg" alt="">
+      <div class="plants">Social Media Marketing MASTERY | Learn Ads on 10+ Platforms</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.5<br>
+    "Enrollment":86,576</b><br>
+    "Description": MASTER online marketing on Twitter, Pinterest, Instagram, YouTube, Facebook, Google and more ad platforms! Coursenvy ® \n    If you want to be successful with Social Media Marketing you will LOVE this Udemy course! You will learn the principles and strategies that work for us and that we have used to build highly converting ads for over 500+ businesses and clients successfully! Facebook, Twitter, Instagram, Pinterest, Google, YouTube, LinkedIn, Tumblr, Wordpress, Blogger... any marketing via social media, we have you covered with this top-rated course! Stop wasting your money blindly running ads. MASTER paid online marketing once and for all! The optimization of your social media accounts is a REQUIRED skill for ALL marketers and business owners. TAKE ACTION and learn social media marketing on 10+ platforms starting today!\n    JOIN THE 100,000+ HAPPY STUDENTS I HAVE TAUGHT SOCIAL MEDIA MARKETING!\n    Do you want to partake in a CONSTANTLY updated Social Media Marketing course that teaches you paid advertising and online marketing skills required for over TEN Social Media Platforms? Learn social media ads from A to Z all in one place!\n        Three reasons to TAKE THIS COURSE right now! \n    You get lifetime access to lectures.",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Course Envy</h3>
+      <button class="btn">Enroll</button>
+    </div>
+  </div>
+</section>
+    <section id="product_section">
+  <div id="products">
+      <h3 style="background-color: yellow; text-align:center;">Buisness</h3>
+    <div class="product" id="succulent1">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\cor1.jpeg" alt="">
+      <div class="plants">An Entire MBA in 1 Course:Award Winning Business School Prof</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.5<br>
+    "Enrollment": 387,825</b><br>
+    "Description": This course is taught by an award winning MBA professor with significant real world experience working at Goldman Sachs as well as in the venture capital, hedge fund and consulting industries (he has founded several companies and sits on several boards). Many business concepts are simply common sense. This course will focus on business concepts that you need to know that might not be common sense. This course makes the general business, accounting and finance process very easy to understand! The professor of this course is also the author of \"101 Crucial Lessons They Don't Teach You in Business School,\" which Forbes magazine recently called \"1 of 6 books that all entrepreneurs need to read right now.",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Chris Haroun</h3>
+      <button class="btn">Enroll</button>
+    </div>
+     <div class="product" id="succulent2">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\cor2.jpeg" alt="">
+      <div class="plants">The Business Intelligence Analyst Course 2020</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.5<br>
+    "Enrollment": 27,247</b><br>
+    "Description": We are proud to present you this one-of-a-kind opportunity. There are several online courses teaching some of the skills related to the BI Analyst profession. The truth of the matter is that none of them completely prepare you.\n\nOur program is different than the rest of the materials available online.  \nThese are the precise technical skills recruiters are looking for when hiring BI Analysts. And today, you have the chance of acquiring an invaluable advantage to get ahead of other candidates. This course will be the secret to your success. And your success is our success, so let’s make it happen!",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: 365 Careers</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent3">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\cor3.jpeg" alt="">
+      <div class="plants">Become a Product Manager | Learn the Skills & Get the Job</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.5<br>
+    "Enrollment": 122,615</b><br>
+    "Description": The most updated and complete Product Management course on Udemy! You'll learn the skills that make up the entire Product Management job and process: from ideation to market research, to UX wireframing to prototyping, technology, metrics, and finally to building the product with user stories, project management, scoping, and leadership. We even have interviews with real life PMs, Q&A sessions with students, and a comprehensive guide to preparing and interviewing for a Product Management job. \n\nRight now, there are over 3,000+ job listings worldwide that are looking for Product Managers, that pay on average $100,000 / year.\n\nThe demand for Product Management is increasing at an insane rate. More and more companies are finally figuring out how important this discipline and this role is to their success. \n\nBut how exactly do you get into the field? There aren't any degrees in Product Management & there are no certifications. Most Product Managers get into the field through luck or connections. That ends here - we'll get you up to date on ALL the skills you need to learn Product Management AND have the best chance at getting the job you want. There's no more ambiguity to it. We'll show you what you need to know and what you have to do - all taught from a Product Management insider.",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Cole MErcer,Evan Kimbrell</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent4">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\cor4.jpeg" alt="">
+      <div class="plants">Tableau 2020 A-Z: Hands-On Tableau Training for Data Science</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.6<br>
+    "Enrollment": 224,413</b><br>
+    "Description": Learn data visualization through Tableau 2020 and create opportunities for you or key decision-makers to discover data patterns such as customer purchase behavior, sales trends, or production bottlenecks.\n\nYou'll learn all of the features in Tableau that allow you to explore, experiment with, fix, prepare, and present data easily, quickly, and beautifully.\n\nUse Tableau to Analyze and Visualize Data So You Can Respond Accordingly\n\n    Connect Tableau to a Variety of Datasets\n\n    Analyze, Blend, Join, and Calculate Data\n\n    Visualize Data in the Form of Various Charts, Plots, and Maps\n\nConvert Raw Data Into Compelling Data Visualizations Using Tableau 2020\n\nBecause every module of this course is independent, you can start in whatever section you wish, and you can do as much or as little as you like.\n\nEach section provides a new data set and exercises that will challenge you so you can learn by immediately applying what you're learning.\n\nContent is updated as new versions of Tableau are released. You can always return to the course to further hone your skills, while you stay ahead of the competition.",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Kirill Eremenko, SuperDataScience Team</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent1">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\cor5.jpeg" alt="">
+      <div class="plants">PMP Exam Prep Seminar - Pass the PMP on Your First Attempt</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.7<br>
+    "Enrollment": 59,313</b><br>
+    "Description": You need to pass the PMP exam and you need quality training that'll help you in your role as a project manager. You also want to learn from an authority in project management, in an online environment with plenty of assignments, videos, and concise explanations. This course provides 35 PDUs and is taught by project management author and expert Joseph Phillips. Joseph is the author of several project management books from McGraw-Hill, the American Management Association, and Dummies Press. He is certified as a PMP, PMI-ACP, ITIL, Project+, and is a Certified Technical Trainer.\n\nThe 35 hours of project management education are earned by completing all of the course, the assignments, exercises, and quizzes. The Learning Management System tracks your completion of the course; if you complete all the videos, assignments, and interactive sessions, you can claim these hours for your PMP exam application or to maintain your PMP certification.
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Joseph Philips</h3>
+      <button class="btn">Enroll</button>
+    </div>
+  </div>
+</section>
+<section id="product_section">
+    <div id="products">
+      <h3 style="background-color: yellow; text-align:center;">Music</h3>
+    <div class="product" id="succulent1">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\mus1.jpeg" alt="">
+      <div class="plants">Intermediate Blues Rhythm Guitar</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.6<br>
+    "Enrollment": 1,442</b><br>
+    "Description": Welcome to Intermediate Blues Rhythm Guitar! That's right, no fancy titles or gimmicks here...just straight up blues rhythm! I developed this course to be a direct companion to my release Beginning Blues Rhythm Guitar. This course will be a natural progression from the basics you may already know and, will fully prepare you to play just about any blues song.",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Corey Congilio, Erich Andreas</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent2">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\mus2.jpeg" alt="">
+      <div class="plants">Pianoforall - Incredible New Way To Learn Piano & Keyboard</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.6<br>
+    "Enrollment": 291,759</b><br>
+    "Description": Pianoforall is specially designed to take complete beginners to an intermediate level faster than any other method. You start with popular rhythm style piano (think of artists like Lennon & McCartney, Elton John, Billy Joel, Barry Mannilow, Lionel Ritchie, Coldplay, Norah Jones and so on) which means you get to sound like a pro right from the start.
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Robin Hall</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent3">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\mus3.jpeg" alt="">
+      <div class="plants">The Complete Piano Chords Course | Beginner to Advanced</div>
+      <p><b>"Price": 360<br>
+    "Rating": 5<br>
+    "Enrollment": 130</b><br>
+    "Description": Imagine being able to sit down at a piano or keyboard and PLAY any song without the need to read sheet music? Now you can easily achieve this within weeks not years and without wasting too much money, time, and effort on traditional Piano Lessons.The course is carefully structured to take absolute beginners with no previous training in Piano or Keyboard to the advanced level within a relatively short period of time.
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Kingsley B-Nkrumah</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent4">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\mus4.jpeg" alt="">
+      <div class="plants">Music Theory for Electronic Producers - The Complete Course!</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.4<br>
+    "Enrollment": 12,422</b><br>
+    "Description": In this course, you will gain a deep understanding of Music Theory and ideas techniques and formulas to use when creating your own electronic music to allow you more options. You'll learn the beauty and the power of music theory that's used by professionals today. With over 8-hours of video, this music course is JAM PACKED with information to help you learn music theory to help you improve at music theory today!
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Tomas George, Digital Music Masters</h3>
+      <button class="btn">Enroll</button>
+    </div>
+    <div class="product" id="succulent1">
+      <img src="C:\Users\kaibi\Downloads\Project e-patshala\mus5.jpeg" alt="">
+      <div class="plants">SINGING SIMPLIFIED #1: The Fast-Track to Singing Like a Pro</div>
+      <p><b>"Price": 360<br>
+    "Rating": 4.6<br>
+    "Enrollment": 21,273</b><br>
+    "Description": SINGING SIMPLIFIED will get you on your way to becoming an excellent singer... faster than you thought possible! Believe it or not, you already have the \"built-in\" ability to be a great singer. You were born with a natural vocal range and I'm going to help you to tap into it - quickly and easily, while having FUN of course! We'll combine technique and everyday emotive sounds in your vocal training to help you understand that singing isn't as difficult or scary as you thought it was.",
+</p>
+      <h3>Discount: 96%(Original:8640)</h3>
+      <h3>Author: Steve Glazer</h3>
+      <button class="btn">Enroll</button>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <button><a href="index.html"><i class="fa fa-angle-double-left" aria-hidden="true">Back</i></a></button>
+  <button style="align-items:right; background-color: red;"><a href="Contact us.html"><i class="fa fa-phone-square" aria-hidden="true">Contact us</i></a></button>  
+</div>
+</html>
